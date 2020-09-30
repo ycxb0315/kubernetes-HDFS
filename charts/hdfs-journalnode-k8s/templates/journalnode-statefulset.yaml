@@ -46,6 +46,11 @@ metadata:
     chart: {{ template "hdfs-k8s.subchart" . }}
     release: {{ .Release.Name }}
 spec:
+  selector:
+    matchLabels:
+      app: {{ template "hdfs-k8s.journalnode.name" . }}
+      chart: {{ template "hdfs-k8s.subchart" . }}
+      release: {{ .Release.Name }}
   serviceName: {{ template "hdfs-k8s.journalnode.fullname" . }}
   replicas: {{ .Values.global.journalnodeQuorumSize }}
   template:
