@@ -783,7 +783,7 @@ spec:
             name: my-hdfs-config
 ---
 # Source: hdfs/charts/hdfs-journalnode-k8s/templates/journalnode-statefulset.yaml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: my-hdfs-journalnode
@@ -842,7 +842,7 @@ spec:
             storage: "20Gi"
 ---
 # Source: hdfs/charts/hdfs-namenode-k8s/templates/namenode-statefulset.yaml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: my-hdfs-namenode
@@ -920,7 +920,7 @@ spec:
             storage: "100Gi"
 ---
 # Source: hdfs/charts/zookeeper/templates/statefulset.yaml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: my-hdfs-zookeeper
